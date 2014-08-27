@@ -57,7 +57,7 @@ Example: `gulp build --gf`. This command build project and generate fonts files 
 Unfortunately, you can generate fonts in OS X only. I'll try to do it for all platforms.
 
 If you'd like to use livereload, add `--lr` key with dev task
-Example: `gulp dev --lr`. Don't forget ro configure browser-sync config in projectConfig.js file.
+Example: `gulp dev --lr`. Don't forget to configure browser-sync config in projectConfig.js file.
 
 File structure
 --------------
@@ -159,7 +159,7 @@ First of all, check projectConfig (projectConfig.js in root directory). There ar
 * useImageWithDpi
 
 So, if you'd like to use SVG, just switch to true this option. And that is all)
-if useImageWithDpi you can choose dpi, which you're going to use in you project.
+In useImageWithDpi you can choose dpi, which you're going to use in you project.
 
 After that, you can add images to your project:
 
