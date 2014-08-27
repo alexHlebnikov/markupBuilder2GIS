@@ -20,7 +20,7 @@ var gulp = require('gulp'),                                     // Gulp JS
             'markup/static/images/sprite/288dpi ' + 
             'markup/static/images/svg ' + 
             'markup/static/fonts ' + 
-            'markup/static/scss/plugins ' + 
+            'markup/static/less/plugins ' + 
             'markup/modules/_template/assets ' + 
             'markup/modules/_template/ie';
 
