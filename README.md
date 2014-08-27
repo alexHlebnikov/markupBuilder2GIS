@@ -44,7 +44,7 @@ You shouldn't use prefixes in css, autoprefixer do it itself. JSHint and lint wi
 Main commands
 -------------
 
-`gulp clean` — clean dev directory.
+`gulp clean` — rm dev and build directory.
 
 `gulp dev` — development task. Create compiled dev-version of project and watch for changes in project's files. Call clean task in the beginning.
 
