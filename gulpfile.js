@@ -131,7 +131,6 @@ gulp.task('replace-static-paths', require('./gulpy/taskFunctions/replaceStaticPa
 
 /* END TASKS */
 
-var watch = require('gulp-watch');
 
 /* WATHERS */
 
