@@ -2,7 +2,7 @@ markupBuilder
 =============
 
 Markup builder on gulp.
-It uses Jade as templater, scss as preprocessor for css, lint for js files, font-generator and many other things.
+It uses Handlebars as templater, less as preprocessor for css, lint for js files, font-generator and many other things.
 
 You have to install `nodeJS` version >= 0.8 and `npm` for using markupBuilder.
 Also you need Java for webfont generator. If you are not going to generate fonts, you don't need it.
@@ -34,8 +34,8 @@ Descritpion
 
 `Markup` is the main folder of project. There are `modules`, `static` folder for static-files and templates of `pages`. 
 Even module is a part of page, for example — «header».
-Even module has it's own temaplte, scss-files, js-files and images. Also it could has `ie` folder for scss files for ie9 and ie8 (For example: ie8.scss, ie9.scss).
-There are templates of pages in `pages` directory of markup. To create new page just create new file with the name of the page or dublicate _template.jade file.
+Even module has it's own temaplte, less-files, js-files and images. Also it could has `ie` folder for less files for ie9 and ie8 (For example: ie8.less, ie9.less).
+There are templates of pages in `pages` directory of markup. To create new page just create new file with the name of the page or dublicate _template.html file.
 
 Modules have to be included into the pages templates. Also modules could include other modules.
 
@@ -65,7 +65,7 @@ File structure
 * Project file structure
     
     - gulpy - usefull functions for gulp and tasks' functions
-    - markup — main folder, has modules, scss and templates of pages.
+    - markup — main folder, has modules, less and templates of pages.
         - static - folder for static files
             - fonts — folder for fonts.
             - images — folder for images.
@@ -82,25 +82,25 @@ File structure
                 - libs - folder for js-libs like jquery
                 - plugins — folder for plugins js
             - misc - folder for misc files    
-            - scss — folder with scss.
-                - spritesScss - folder with scss for sprites
+            - less — folder with less.
+                - spritesless - folder with less for sprites
                 - spriteGeneratorTemplates - folder with templastes for sprite generator
-                - plugins - folder fo scss for plugins (colud have subdirectories)
-                - common.scss — common stylies for project (not required)
-                - GUI.scss — GUI-elements stylies (not required)
-                - mixins.scss — mixins (not required)
-                - reset.scss — reset css (not required)
-                - vars.scss — vars of the project (not required)
-                - fonts.scss — scss for fonts of the project (not required)    
+                - plugins - folder fo less for plugins (colud have subdirectories)
+                - common.less — common stylies for project (not required)
+                - GUI.less — GUI-elements stylies (not required)
+                - mixins.less — mixins (not required)
+                - reset.less — reset css (not required)
+                - vars.less — vars of the project (not required)
+                - fonts.less — less for fonts of the project (not required)    
         - modules — folder with modules.
             - _template — folder with template module.
                 - assets — for the module.
-                - ie - scss-files for old ie browsers (ie8.scss and ie9.scss could be here) 
-                - _template.jade — template of the module.
+                - ie - less-files for old ie browsers (ie8.less and ie9.less could be here) 
+                - _template.html — template of the module.
                 - _template.js — js file of the module.
-                - _template.scss — scss file of the module.
+                - _template.less — less file of the module.
         - pages - pages folder
-            - _template.jade — template of the page.
+            - _template.html — template of the page.
 
 * Dev version of compiled project
     
@@ -168,14 +168,14 @@ After that, you can add images to your project:
 
 When, you can use two mixins into your modules:
 
-@include bg($imageName, $repeat) for png-sprite.
-$imageName is a image name (png) with $-sign in the beginning.
+.bg(@imageName, @repeat) for png-sprite.
+@imageName is a image name (png) with @-sign in the beginning.
 The second param is not required. This param is for background-repeat option. It's 'no-repeat' in default.
 
 This mixin include image from sprite to your block, and include media queries for different resolutions.
 
 Another mixin is:
-@include bg-svg($imageName, $repeat)
+.bg-svg(@imageName, @repeat)
 It's like the first mixin, but include svg file to your block (and png file for ie8. This file will be rastered from svg file). $imageName is a image name (svg).
 The second param is not required. This param is for background-repeat option. It's 'no-repeat' in default.
 
