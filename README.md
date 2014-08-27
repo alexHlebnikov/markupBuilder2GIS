@@ -119,7 +119,7 @@ File structure
             - rasterSvgSprite — sprite of raster svg-files    
             — svg — svg images
         - js — folder with js.
-            - html5shiv — folder with js-files which have to be separate. There are htm5shiv. 
+            - separateLibs — folder with js-files which have to be separate. There are htm5shiv. 
             - libs - folder for js-libs like jquery.
             - main.js — main.js file.
 
