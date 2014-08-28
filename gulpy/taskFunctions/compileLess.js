@@ -30,7 +30,7 @@ var gulp = require('gulp'),                                     // Gulp JS
         './markup/static/less/common.less',
         './markup/static/less/plugins/*.less',
         './markup/static/less/plugins/**/*.less',
-        './markup/modules/**/*.less'
+        './markup/modules/*/*.less'
     );
 
 // Less compilation
