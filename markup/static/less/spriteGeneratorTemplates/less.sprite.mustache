@@ -47,9 +47,9 @@
   .bg-template(@sprite, @repeat: no-repeat) {
     .sprite-mixin-template(@sprite);
     background-repeat: @repeat;
-    $sprite-total-width: ~`"@{sprite}".split(', ')[6]`;
-    $sprite-total-height: ~`"@{sprite}".split(', ')[7]`;
-    background-size: $sprite-total-width, $sprite-total-height;
+    @sprite-total-width: ~`"@{sprite}".split(', ')[6]`;
+    @sprite-total-height: ~`"@{sprite}".split(', ')[7]`;
+    background-size: @sprite-total-width, @sprite-total-height;
   }  
   
   .highDpiMedia(@sprite) {
