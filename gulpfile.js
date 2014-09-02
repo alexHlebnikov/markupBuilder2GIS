@@ -10,7 +10,7 @@ var gulp = require('gulp'),                     // Gulp JS
     useLiveReload = gutil.env.lr,
 
     // Configs
-    projectConfig = require('./projectConfig');
+    projectConfig = require('./projectConfig'),
     browserSyncConfig = projectConfig.browserSyncConfig;
 
 
