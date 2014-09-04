@@ -1,5 +1,5 @@
 var gulp = require('gulp'),                                     // Gulp JS
-    handlebars = require('gulp-compile-handlebars')
+    handlebars = require('gulp-compile-handlebars'),
     gulpif = require('gulp-if'),                                // Gulp if module
     notify = require('gulp-notify'),                            // Plugin for notify
     notifyConfig = require('../../projectConfig').notifyConfig, // Notify config
@@ -19,7 +19,7 @@ module.exports = function(cb) {
         //         return str.toUpperCase();
         //     }
         // }
-    }
+    };
 
     gulp.src(['./markup/pages/*.html', '!./markup/pages/_*.html'])
         .pipe(handlebars(templateData, options))
